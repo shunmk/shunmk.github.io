@@ -1,0 +1,138 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    line-height: 1.6em;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+input,
+select,
+button {
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+h3,
+h4,
+h5 {
+    margin: 0 0 5px 0;
+}
+
+h1 {
+    font-size: 1.75em;
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0 0 8px 0;
+}
+
+h3 {
+    font-size: 1.25em;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-both {
+    clear: both;
+}
+
+.inline {
+    display: inline !important;
+}
+
+.inline-block {
+    display: inline-block !important;
+}
+
+.block {
+    display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-absolute.expand {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.transparent {
+    opacity: 0;
+}
+
+.transparent-half {
+    opacity: 0.5;
+}
+
+.text-lg {
+    font-size: 1.5em;
+}
+
+.text-md {
+    font-size: 1.25em;
+}
+
+.text-sm {
+    font-size: 0.9em;
+}
+
+.pointer-events-none {
+    pointer-events: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media (hover: hover) {
+    .hover-pointer:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 1079px) {
+    .inline-sm {
+        display: inline !important;
+    }
+
+    .inline-block-sm {
+        display: inline-block !important;
+    }
+
+    .block-sm {
+        display: block !important;
+    }
+
+    .hidden-sm {
+        display: none !important;
+    }
+}
