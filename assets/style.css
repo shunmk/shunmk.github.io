@@ -251,6 +251,10 @@
       align-items: center;
     }
 
+    .work-group-2026 .work-group .wrapper {
+      min-height: unset;
+    }
+
     .work-group .box-vertical {
       width: 100%;
     }
