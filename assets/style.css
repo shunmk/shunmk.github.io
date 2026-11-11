@@ -19,7 +19,7 @@
     }
 
     html {
-      overflow-x: clip;
+      overflow-x: hidden;
     }
 
     a, a:visited {
