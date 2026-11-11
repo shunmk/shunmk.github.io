@@ -5,9 +5,9 @@
       <meta name="robots" content="noindex, nofollow">
       <meta name="theme-color" content="rgb(0, 108, 255)">
 
-      <link rel="preconnect" href="https://googleapis.com">
-      <link rel="preconnect" href="https://gstatic.com" crossorigin>
-      <link href="https://googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
       <link href="./assets/style.css" rel="stylesheet">
 
       <title>
@@ -22,15 +22,12 @@
         <div class="slogan-overlay"></div>
         <img class="slogan-hash" src="./assets/hashtag.svg" alt="">
         <div class="wrapper box">
-          <div class="slogan-image">
-          </div>
-
           <div class="slogan-description">
             <h1>
               Web Developer<br>
               Portfolio
             </h1>
-            <a class="slogan-contact" href="mailto:shunmiyo0832@gmail.com" aria-label="shunmiyo0832@gmail.com にメールを送る">
+            <a class="slogan-contact" href="mailto:shunmiyo0832@gmail.com">
               <img class="footer-icon" src="./assets/email.svg" alt="">
               shunmiyo0832@gmail.com
             </a>
@@ -243,7 +240,7 @@
     <footer>
       <div class="wrapper box">
         <div class="footer-content">
-          <a href="mailto:shunmiyo0832@gmail.com" aria-label="shunmiyo0832@gmail.com にメールを送る">
+          <a href="mailto:shunmiyo0832@gmail.com">
             <img class="footer-icon" src="./assets/email.svg" alt=""> shunmiyo0832@gmail.com
           </a>
           <div class="footer-note">
@@ -253,10 +250,6 @@
         </div>
       </div>
     </footer>
-  </body>
-
-
-
   <script>
     const updateVisibility = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -284,7 +277,8 @@
 
     window.addEventListener('scroll', updatePreview, { passive: true });
     window.addEventListener('resize', updatePreview);
-    
+
     updatePreview();
   </script>
+  </body>
 </html>
