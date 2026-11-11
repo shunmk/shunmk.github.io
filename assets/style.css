@@ -18,6 +18,10 @@
       font-family: 'Noto Sans JP', sans-serif;
     }
 
+    html {
+      overflow-x: clip;
+    }
+
     a, a:visited {
       text-decoration: none;
       color: unset;
@@ -235,6 +239,7 @@
 
     .work-group-2026 {
       min-height: auto;
+      overflow: hidden;
     }
 
     .work-group .wrapper {
@@ -324,6 +329,10 @@
       font-size: 0.9em;
     }
 
+    .work-description-flex-technology {
+      flex-wrap: wrap;
+    }
+
     .work-description-detail {
       font-size: 0.9em;
       line-height: 1.8;
@@ -356,6 +365,10 @@
     @media (max-width: 719px) {
       .work-part-grid {
         grid-template-columns: 1fr;
+      }
+
+      .slogan-group {
+        padding: 80px 0;
       }
 
       .footer-content {
