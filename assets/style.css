@@ -258,6 +258,7 @@
 
     .work-group.work-group-2026 .wrapper {
       min-height: unset;
+      padding: calc(var(--spacing) * 5);
     }
 
     .work-group .box-vertical {
