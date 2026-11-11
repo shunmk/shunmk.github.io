@@ -1,0 +1,262 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./assets/site_common.css" rel="stylesheet">
+
+    <style>
+      html, body {
+        color: #222;
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        z-index: 10;
+        color: #fff;
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,0));
+      }
+
+      .header-logo {
+        background-image: url('./assets/concert_artist_logo.png');
+        width: 48px;
+        height: 36px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .header-menu-list {
+        font-size: 0.7em;
+      }
+
+      section.intro {
+        height: 60vh;
+        max-height: 200px;
+        background-image: url('./assets/concert_artist_intro_background.png');
+        background-size: cover;
+        background-position: center;
+        position: relative;
+      }
+
+      .intro-content-box {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,255,25,0.5);
+        background-image: url('./assets/concert_artist_intro_background_shade.png');
+        background-size: 3px 3px;
+      }
+
+      .intro-content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        padding: var(--spacing);
+        width: 100%;
+        color: #fff;
+        text-shadow: 0 0 3px rgba(0,0,0,0.75);
+        background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.5));
+      }
+
+      .intro-content-title {
+        font-size: 0.8em;
+        font-weight: 700;
+      }
+
+      .intro-content-datetime {
+        font-size: 0.6em;
+        opacity: 0.75;
+      }
+
+      main {
+        padding: calc(var(--spacing) / 3);
+      }
+
+      main > section {
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+      }
+
+      main > section:last-child {
+        border-bottom: none;
+      }
+
+      .section-title {
+        font-size: 0.9em;
+        color: #00b734;
+        margin-bottom: calc(var(--spacing) / 2);
+      }
+
+      .section-title-sub {
+        font-weight: 400;
+        font-size: 0.75em;
+        opacity: 0.5;
+        color: #222;
+      }
+
+      .news-element {
+        padding: calc(var(--spacing) / 3);
+        font-size: 0.6em;
+        margin-bottom: calc(var(--spacing) / 3);
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,0.05);
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        border-radius: 3px;
+      }
+
+      .news-list > .news-element:last-child {
+        margin-bottom: 0;
+      }
+
+      .news-title {
+        font-weight: 500;
+      }
+
+      .news-date {
+        font-size: 0.75em;
+        color: #00b734;
+      }
+
+      .merch-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc(var(--spacing) / 2);
+      }
+
+      .merch-item {
+        flex: 0 0 calc((100% - var(--spacing)) / 3);
+        aspect-ratio: 1;
+        background-color: #eee;
+        background-size: cover;
+      }
+
+      @media (max-width: 319px) {
+        .section-title {
+          text-align: center;
+        }
+      }
+
+      @media (max-width: 239px) {
+        .merch-item {
+          flex-basis: calc((100% - var(--spacing) / 2) / 2);
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <div class="box-horizontal">
+        <div class="flex space-between">
+          <div>
+            <div class="header-logo"></div>
+          </div>
+
+          <div class="flex header-menu-list">
+            <div>
+              NEWS
+            </div>
+
+            <div>
+              MERCH
+            </div>
+
+            <div>
+              ACCESS
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="intro">
+      <div class="intro-content-box">
+        <div class="intro-content">
+          <div class="intro-content-title">
+            LOREM ARENA KOBE
+          </div>
+
+          <div class="intro-content-datetime">
+            11月4日(水) OPEN 17:00 / START 18:00
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section class="news box">
+        <h2 class="section-title">
+          NEWS<br>
+          <span class="section-title-sub">
+            最新情報
+          </span>
+        </h2>
+
+        <div class="news-list">
+          <div class="news-element">
+            <div class="flex space-between">
+              <div class="news-title">
+                VIPチケットに関するご案内
+              </div>
+
+              <div class="news-date">
+                11.1
+              </div>
+            </div>
+          </div>
+
+          <div class="news-element">
+            <div class="flex space-between">
+              <div class="news-title">
+                グッズ販売のご案内
+              </div>
+
+              <div class="news-date">
+                10.17
+              </div>
+            </div>
+          </div>
+
+          <div class="news-element">
+            <div class="flex space-between">
+              <div class="news-title">
+                ASIA TOUR 開催のご案内
+              </div>
+
+              <div class="news-date">
+                10.08
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="news box">
+        <h2 class="section-title">
+          MERCH<br>
+          <span class="section-title-sub">
+            グッズ
+          </span>
+        </h2>
+
+        <div class="merch-list">
+          <div class="merch-item" style="background-image: url('./assets/concert_artist_merch_0.png');"></div>
+          <div class="merch-item" style="background-image: url('./assets/concert_artist_merch_1.png');"></div>
+          <div class="merch-item" style="background-image: url('./assets/concert_artist_merch_2.png');"></div>
+          <div class="merch-item" style="background-image: url('./assets/concert_artist_merch_3.png');"></div>
+          <div class="merch-item" style="background-image: url('./assets/concert_artist_merch_4.png');"></div>
+          <div class="merch-item" style="background-image: url('./assets/concert_artist_merch_5.png');"></div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

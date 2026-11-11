@@ -1,0 +1,200 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./assets/site_common.css" rel="stylesheet">
+    
+    <style>
+      html, body {
+        background-color: #222;
+        color: #fff;
+      }
+
+      button {
+        border: none;
+        border-radius: 9999px;
+        padding: calc(var(--spacing) / 3) calc(var(--spacing) / 2);
+      }
+
+      .button {
+        background-color: #555;
+        color: #fff;
+      }
+
+      .button-color {
+        background-color: #ff41bd;
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 1.05em;
+        font-weight: 400;
+        text-align: center;
+      }
+
+      .color-primary {
+        color: #ff41bd;
+      }
+
+      header {
+        height: 50px;
+        line-height: 50px;
+        background-image: linear-gradient(to bottom, #444, #333);
+        font-size: 0.9em;
+      }
+
+      .header-logo {
+        width: 96px;
+        height: 50px;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      .header-icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+      }
+
+      .slogan-box {
+        padding: 30px 0;
+        background-image: url('./assets/concert_streaming_slogan_background.png');
+        background-position: center;
+        background-size: cover;
+      }
+
+      .live-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: calc(var(--spacing) / 2);
+        width: 100%;
+        margin-top: var(--spacing);
+      }
+
+      .live-item {
+        flex: 0 0 calc((100% - var(--spacing)) / 3);
+        aspect-ratio: 1;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 5px 25px 5px 5px;
+        background-size: cover;
+        position: relative;
+      }
+
+      .live-item-title {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        font-size: 0.75em;
+        background-color: rgba(0,0,0,0.5);
+        padding: calc(var(--spacing) / 3) calc(var(--spacing) / 2);
+        backdrop-filter: blur(3px);
+      }
+
+      @media (max-width: 280px) {
+        .live-item {
+          flex-basis: calc((100% - var(--spacing) / 2) / 2);
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <div class="box-horizontal">
+        <div class="flex space-between">
+          <div>
+            <div class="header-logo" style="background-image: url('./assets/concert_streaming_logo.png');"></div>
+          </div>
+
+          <div class="flex">
+            <div aria-label="ユーザー">
+              <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m5.5 6c0-2.5-2.5-4-5.5-4s-5.5 1.5-5.5 4v1h11z" />
+              </svg>
+            </div>
+
+            <div aria-label="メニュー">
+              <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M1 3h14v2H1zm0 4h14v2H1zm0 4h14v2H1z" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="slogan-box">
+        <div class="box flex vertical center">
+          <h1>
+            <b>CONNECTING</b> <span class="opacity-75">THE WORLD</span><br>
+            <span class="opacity-50">WITH</span> <b class="color-primary">LIVE STREAMING</b>
+          </h1>
+
+          <div class="text-align-center">
+            <button type="button" class="button-color">
+              ライブ
+            </button>
+
+            <button type="button" class="button">
+              アーカイブ
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="box">
+          <h2>
+            ライブ
+          </h2>
+
+          <div class="live-list">
+            <div class="live-item" style="background-image: url('./assets/concert_live_00.png')">
+              <div class="live-item-title">
+                iYU
+              </div>
+            </div>
+
+            <div class="live-item" style="background-image: url('./assets/concert_live_01.png')">
+              <div class="live-item-title">
+                Martiz
+              </div>
+            </div>
+
+            <div class="live-item" style="background-image: url('./assets/concert_live_02.png')">
+              <div class="live-item-title">
+                tsu-key
+              </div>
+            </div>
+
+            <div class="live-item" style="background-image: url('./assets/concert_live_03.png')">
+              <div class="live-item-title">
+                Bluetal
+              </div>
+            </div>
+
+            <div class="live-item" style="background-image: url('./assets/concert_live_04.png')">
+              <div class="live-item-title">
+                木曜日の猫
+              </div>
+            </div>
+
+            <div class="live-item" style="background-image: url('./assets/concert_live_05.png')">
+              <div class="live-item-title">
+                MaiTheSoul
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

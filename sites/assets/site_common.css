@@ -1,0 +1,149 @@
+:root {
+  --spacing: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow: hidden;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: unset;
+}
+
+button {
+  appearance: none;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.15em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h4 {
+  font-size: 1.05em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) / 2);
+}
+
+.flex.space-between {
+  justify-content: space-between;
+}
+
+.flex.start {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex.vertical {
+  flex-direction: column;
+}
+
+.flex.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex.end {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.flex.between {
+  justify-content: space-between;
+}
+
+.flex.around {
+  justify-content: space-around;
+}
+
+.flex.evenly {
+  justify-content: space-evenly;
+}
+
+.flex.align-start {
+  align-items: flex-start;
+}
+
+.flex.align-center {
+  align-items: center;
+}
+
+.flex.align-end {
+  align-items: flex-end;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.box {
+  padding: var(--spacing);
+}
+
+.box-vertical {
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
+}
+
+.box-horizontal {
+  padding-left: var(--spacing);
+  padding-right: var(--spacing);
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-25 {
+  opacity: 0.25;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}

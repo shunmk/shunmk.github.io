@@ -1,0 +1,255 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="./assets/site_common.css" rel="stylesheet">
+
+    <style>
+      :root {
+        --header-height: 38px;
+      }
+
+      html, body {
+        background-color: rgb(250,250,255);
+      }
+
+      header {
+        height: var(--header-height);
+        line-height: var(--header-height);
+        background-color: #fff;
+        box-shadow: 0 0 15px rgba(25,25,0,0.1);
+        position: relative;
+        z-index: 10;
+      }
+
+      .header-logo {
+        background-image: url('./assets/concert_ordermade_logo.png');
+        width: 100px;
+        height: var(--header-height);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        filter: brightness(0.8);
+      }
+
+      .header-icon {
+        display: block;
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+        opacity: 0.25;
+      }
+
+      main {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: calc(100% - var(--header-height));
+      }
+
+      .preview,
+      .tool {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+      }
+
+      .preview {
+        left: 0;
+        background-color: #fff;
+        background-image: url('./assets/concert_ordermade_preview_base.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: 0 0 15px rgba(25,25,0,0.1);
+        z-index: 5;
+      }
+
+      .tool {
+        right: 0;
+      }
+
+      .tool-item {
+        background-size: cover;
+      }
+
+      .section-content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .preview-history-button-list {
+        position: absolute;
+        bottom: calc(var(--spacing) / 2);
+        right: calc(var(--spacing) / 2);
+      }
+
+      .preview-history-button {
+        display: flex;
+        flex: 0 0 20px;
+        width: 20px;
+        height: 20px;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 0;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 0 5px rgba(25,25,0,0.05);
+        border-radius: 50%;
+        background-color: #fff;
+        color: #555;
+        line-height: 0;
+      }
+
+      .preview-history-button svg {
+        display: block;
+        flex: none;
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.6;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+
+      .preview-history-button.redo svg {
+        transform: scaleX(-1);
+      }
+
+      .tab-list {
+        display: flex;
+        background-color: #fff;
+      }
+
+      .tab-list > div {
+        flex: 1;
+        text-align: center;
+        opacity: 0.5;
+        font-size: 0.65em;
+        padding: calc(var(--spacing) / 3);
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+      }
+
+      .tab-list > .active {
+        opacity: 1;
+        font-weight: 700;
+        border-color: #ffc800;
+      }
+
+      .tool-item-list {
+        padding: calc(var(--spacing) / 2);
+      }
+
+      .tool-item {
+        width: 100%;
+        aspect-ratio: 3 / 1;
+        margin-bottom: calc(var(--spacing) / 2);
+        background-color: #fff;
+        border: 1px solid rgba(0,0,0,0.05);
+        border-radius: 3px;
+      }
+
+      .tool-item:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 320px) {
+        .preview,
+        .tool {
+          left: 0;
+          right: auto;
+          width: 100%;
+          height: 50%;
+        }
+
+        .preview {
+          top: 0;
+        }
+
+        .tool {
+          top: 50%;
+        }
+      }
+    </style>
+  </head>
+  
+  <body>
+    <header>
+      <div class="box-horizontal">
+        <div class="flex space-between">
+          <div aria-label="メニュー">
+            <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z" />
+            </svg>
+          </div>
+
+          <div>
+            <div class="header-logo"></div>
+          </div>
+
+          <div aria-label="カート">
+            <svg class="header-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M7 18a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm10 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4ZM7.2 14h9.6a2 2 0 0 0 1.9-1.4L21 6H6.2L5.5 3H2v2h1.9l2.6 10.8A2.5 2.5 0 0 0 9 18h10v-2H9a.5.5 0 0 1-.5-.4z" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="preview">
+        <div class="section-content">
+          <div class="flex preview-history-button-list">
+            <button class="preview-history-button" type="button" aria-label="Undo">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 7a6.5 6.5 0 1 1 1.2 7.3M4 7V3M4 7h4" />
+              </svg>
+            </button>
+
+            <button class="preview-history-button redo" type="button" aria-label="Redo">
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 7a6.5 6.5 0 1 1 1.2 7.3M4 7V3M4 7h4" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tool">
+        <div class="section-content">
+          <div class="tab-list">
+            <div class="active">
+              テキスト
+            </div>
+
+            <div>
+              写真
+            </div>
+
+            <div>
+              スタンプ
+            </div>
+          </div>
+
+          <div class="tool-item-list">
+            <div class="tool-item" style="background-image: url('./assets/concert_ordermade_preview_tool_font_0.png');"></div>
+            <div class="tool-item" style="background-image: url('./assets/concert_ordermade_preview_tool_font_1.png');"></div>
+            <div class="tool-item" style="background-image: url('./assets/concert_ordermade_preview_tool_font_2.png');"></div>
+            <div class="tool-item" style="background-image: url('./assets/concert_ordermade_preview_tool_font_3.png');"></div>
+            <div class="tool-item" style="background-image: url('./assets/concert_ordermade_preview_tool_font_4.png');"></div>
+            <div class="tool-item" style="background-image: url('./assets/concert_ordermade_preview_tool_font_5.png');"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
