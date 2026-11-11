@@ -376,6 +376,15 @@
         grid-template-columns: 1fr;
       }
 
+      .work-part-description,
+      .work-part-description.is-visible {
+        transform: none;
+      }
+
+      .work-part-description {
+        transition: opacity var(--transition-duration) ease;
+      }
+
       .slogan-group {
         padding: 80px 0;
       }
